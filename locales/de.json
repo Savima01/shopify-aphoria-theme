@@ -8,6 +8,23 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": {
+    "navigation": {
+      "search": "Suchen",
+      "expand": "Erweitern",
+      "collapse": "Einklappen",
+      "menu": "Menü",
+      "menu_all": "Alle"
+    },
+    "customer": {
+      "account": "Mein Konto",
+      "log_out": "Abmelden",
+      "log_in": "Anmelden",
+      "or": "oder",
+      "register": "Registrieren",
+      "create_account": "Konto erstellen"
+    }
+  },
   "general": {
     "password_page": {
       "login_form_heading": "Shop mit Passwort betreten:",
@@ -38,6 +55,9 @@
       }
     },
     "continue_shopping": "Weiter shoppen",
+    "recently_viewed": {
+      "title": "Zuletzt angesehen"
+    },
     "pagination": {
       "label": "Seitennummerierung",
       "page": "Seite {{ number }}",
