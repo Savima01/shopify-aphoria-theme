@@ -1,14 +1,26 @@
+{%- liquid
+  assign overlay_alpha   = section.settings.overlay_opacity | divided_by: 100.0
+  assign overlay_alpha70 = overlay_alpha | times: 0.7
+  assign tint_alpha      = section.settings.overlay_tint_opacity | divided_by: 100.0
+  assign tint_rgba       = section.settings.overlay_tint | color_modify: 'alpha', tint_alpha
+-%}
 {%- style -%}
   #aphoria-hero-{{ section.id }} {
-    --hero-height-mobile: {{ section.settings.height_mobile }}px;
+    --hero-height-mobile:  {{ section.settings.height_mobile }}px;
     --hero-height-desktop: {{ section.settings.height_desktop }}px;
-    --hero-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    --hero-tint-r: {{ section.settings.overlay_tint | color_extract: 'red' }};
-    --hero-tint-g: {{ section.settings.overlay_tint | color_extract: 'green' }};
-    --hero-tint-b: {{ section.settings.overlay_tint | color_extract: 'blue' }};
-    --hero-tint-opacity: {{ section.settings.overlay_tint_opacity | divided_by: 100.0 }};
-    --hero-content-align: {{ section.settings.content_alignment }};
-    --hero-text-color: {{ section.settings.text_color }};
+    --hero-content-align:  {{ section.settings.content_alignment }};
+    --hero-text-color:     {{ section.settings.text_color }};
+  }
+  #aphoria-hero-{{ section.id }} .aphoria-hero__overlay {
+    background: linear-gradient(
+      160deg,
+      rgba(0,0,0,{{ overlay_alpha }}) 0%,
+      rgba(0,0,0,{{ overlay_alpha70 }}) 60%,
+      rgba(0,0,0,0) 100%
+    );
+  }
+  #aphoria-hero-{{ section.id }} .aphoria-hero__overlay::after {
+    background: {{ tint_rgba }};
   }
 {%- endstyle -%}
 
@@ -140,19 +152,12 @@
 .aphoria-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    160deg,
-    rgba(0, 0, 0, var(--hero-overlay, 0.5)) 0%,
-    rgba(0, 0, 0, calc(var(--hero-overlay, 0.5) * 0.7)) 60%,
-    rgba(0, 0, 0, 0) 100%
-  );
 }
 
 .aphoria-hero__overlay::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(var(--hero-tint-r, 124), var(--hero-tint-g, 29), var(--hero-tint-b, 60), var(--hero-tint-opacity, 0.18));
   pointer-events: none;
 }
 
