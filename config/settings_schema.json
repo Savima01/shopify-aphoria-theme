@@ -2,9 +2,9 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "eboost",
+    "theme_name": "Aphoria",
     "theme_version": "1.0.0",
-    "theme_author": "EBOOST",
+    "theme_author": "Aphoria Studio",
     "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
@@ -172,6 +172,43 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "Überschriften-Größen"
+      },
+      {
+        "type": "range",
+        "id": "aphoria_h1_size",
+        "label": "Überschrift 1 (Hero)",
+        "min": 36,
+        "max": 120,
+        "step": 2,
+        "default": 72,
+        "unit": "px",
+        "info": "Maximalgröße auf Desktop"
+      },
+      {
+        "type": "range",
+        "id": "aphoria_h2_size",
+        "label": "Überschrift 2 (Sektionen)",
+        "min": 24,
+        "max": 72,
+        "step": 2,
+        "default": 48,
+        "unit": "px",
+        "info": "z.B. Brand Story, Testimonials"
+      },
+      {
+        "type": "range",
+        "id": "aphoria_h3_size",
+        "label": "Überschrift 3 (Produkt-Titel)",
+        "min": 16,
+        "max": 36,
+        "step": 1,
+        "default": 22,
+        "unit": "px",
+        "info": "z.B. Produktkarten, Werte-Titel"
       }
     ]
   },

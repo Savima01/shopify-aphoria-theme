@@ -1,10 +1,7 @@
 /* APHORIA — Luxury Beauty Design System */
 
-/* ─── Typography Scale ─── */
+/* ─── Typography Scale ─── (Werte kommen aus Theme-Einstellungen → Typografie) */
 :root {
-  --aphoria-h1:       clamp(42px, 7vw, 96px);
-  --aphoria-h2:       clamp(28px, 4vw, 52px);
-  --aphoria-h3:       clamp(18px, 2vw, 26px);
   --aphoria-body-lg:  clamp(15px, 1.3vw, 17px);
   --aphoria-body-sm:  clamp(13px, 1.1vw, 15px);
   --aphoria-label-sz: 10px;

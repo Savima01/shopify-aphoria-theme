@@ -69,9 +69,13 @@
         --font-heading-weight: {{ settings.type_header_font.weight }};
 
         --font_size_base: {{ settings.type_base_size }}px;
-        --font_size_header: {{ settings.type_header_base_size | default: 14 }}px  ; 
+        --font_size_header: {{ settings.type_header_base_size | default: 14 }}px;
         --font-body-scale: {{ settings.body_scale | divided_by: 100.0 }};
         --font-heading-scale: {{ settings.heading_scale | times: 1.0 | divided_by: settings.body_scale }};
+
+        --aphoria-h1: clamp({{ settings.aphoria_h1_size | times: 0.55 | round }}px, 7vw, {{ settings.aphoria_h1_size }}px);
+        --aphoria-h2: clamp({{ settings.aphoria_h2_size | times: 0.6 | round }}px, 4vw, {{ settings.aphoria_h2_size }}px);
+        --aphoria-h3: clamp({{ settings.aphoria_h3_size | times: 0.8 | round }}px, 2vw, {{ settings.aphoria_h3_size }}px);
 
         --media-padding: {{ settings.media_padding }}px;
         --media-border-opacity: {{ settings.media_border_opacity | divided_by: 100.0 }};
