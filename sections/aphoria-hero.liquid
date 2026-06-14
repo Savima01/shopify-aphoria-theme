@@ -1,0 +1,389 @@
+{%- style -%}
+  #aphoria-hero-{{ section.id }} {
+    --hero-height-mobile: {{ section.settings.height_mobile }}px;
+    --hero-height-desktop: {{ section.settings.height_desktop }}px;
+    --hero-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --hero-content-align: {{ section.settings.content_alignment }};
+    --hero-text-color: {{ section.settings.text_color }};
+  }
+{%- endstyle -%}
+
+<section
+  id="aphoria-hero-{{ section.id }}"
+  class="aphoria-hero{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  aria-label="{{ 'sections.aphoria_hero.label' | t }}"
+>
+  <div class="aphoria-hero__media">
+    {%- if section.settings.video != blank -%}
+      <video
+        class="aphoria-hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="{{ section.settings.image | image_url: width: 1800 }}"
+      >
+        <source src="{{ section.settings.video }}">
+      </video>
+    {%- elsif section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 2000
+        | image_tag:
+          class: 'aphoria-hero__img',
+          loading: 'eager',
+          fetchpriority: 'high',
+          sizes: '100vw',
+          widths: '375,750,1100,1500,1800,2000'
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'aphoria-hero__placeholder' }}
+    {%- endif -%}
+    <div class="aphoria-hero__overlay"></div>
+  </div>
+
+  <div class="aphoria-hero__content aphoria-container">
+    <div class="aphoria-hero__inner">
+
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="aphoria-hero__eyebrow aphoria-label aphoria-reveal">
+          {{ section.settings.eyebrow | escape }}
+        </p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="aphoria-hero__heading aphoria-heading aphoria-reveal aphoria-reveal--delay-1">
+          {{ section.settings.heading }}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.subheading != blank -%}
+        <p class="aphoria-hero__subheading aphoria-body aphoria-reveal aphoria-reveal--delay-2">
+          {{ section.settings.subheading | escape }}
+        </p>
+      {%- endif -%}
+
+      <div class="aphoria-hero__actions aphoria-reveal aphoria-reveal--delay-3">
+        {%- if section.settings.button_label != blank -%}
+          <a
+            href="{{ section.settings.button_url }}"
+            class="aphoria-btn aphoria-btn--ghost"
+          >
+            {{ section.settings.button_label | escape }}
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.button_2_label != blank -%}
+          <a
+            href="{{ section.settings.button_2_url }}"
+            class="aphoria-btn aphoria-btn--primary"
+          >
+            {{ section.settings.button_2_label | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+
+  {%- if section.settings.show_scroll_indicator -%}
+    <div class="aphoria-hero__scroll" aria-hidden="true">
+      <span class="aphoria-hero__scroll-line"></span>
+      <span class="aphoria-label">{{ 'sections.aphoria_hero.scroll' | t }}</span>
+    </div>
+  {%- endif -%}
+</section>
+
+{% stylesheet %}
+.aphoria-hero {
+  position: relative;
+  width: 100%;
+  min-height: var(--hero-height-mobile, 90vh);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .aphoria-hero {
+    min-height: var(--hero-height-desktop, 100vh);
+  }
+}
+
+.aphoria-hero__media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aphoria-hero__img,
+.aphoria-hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aphoria-hero__placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.aphoria-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(10, 2, 5, calc(var(--hero-overlay, 0.5) * 1.2)) 0%,
+    rgba(10, 2, 5, var(--hero-overlay, 0.5)) 50%,
+    rgba(124, 29, 60, calc(var(--hero-overlay, 0.5) * 0.4)) 100%
+  );
+}
+
+.aphoria-hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.aphoria-hero__inner {
+  max-width: 680px;
+  text-align: var(--hero-content-align, left);
+}
+
+@media (max-width: 767px) {
+  .aphoria-hero__inner {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+.aphoria-hero__eyebrow {
+  color: var(--hero-text-color, #C9A57E);
+  margin-bottom: 20px;
+}
+
+.aphoria-hero__heading {
+  font-size: clamp(42px, 7vw, 96px);
+  color: var(--hero-text-color, #F2D0C8);
+  margin-bottom: 24px;
+  line-height: 1.0;
+}
+
+.aphoria-hero__subheading {
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: rgba(242, 208, 200, 0.85);
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .aphoria-hero__subheading {
+    margin-inline: auto;
+  }
+}
+
+.aphoria-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .aphoria-hero__actions {
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .aphoria-hero__actions .aphoria-btn {
+    width: 100%;
+    max-width: 340px;
+    margin-inline: auto;
+  }
+}
+
+.aphoria-hero__scroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(242, 208, 200, 0.6);
+  letter-spacing: 0.2em;
+  font-size: 9px;
+}
+
+.aphoria-hero__scroll-line {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(180deg, transparent, rgba(242, 208, 200, 0.6));
+  animation: aphoria-scroll-line 2s ease-in-out infinite;
+}
+
+@keyframes aphoria-scroll-line {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+@media (max-width: 767px) {
+  .aphoria-hero__scroll { display: none; }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Aphoria Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hintergrundbild"
+    },
+    {
+      "type": "text",
+      "id": "video",
+      "label": "Video URL (MP4)",
+      "info": "Optionales Hintergrundvideo (MP4-URL)"
+    },
+    {
+      "type": "header",
+      "content": "Höhe"
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Höhe Mobile (px)",
+      "min": 400,
+      "max": 900,
+      "step": 20,
+      "default": 700,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "label": "Höhe Desktop (px)",
+      "min": 500,
+      "max": 1000,
+      "step": 20,
+      "default": 900,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay-Dunkelheit",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "default": 55,
+      "unit": "%"
+    },
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow-Text",
+      "default": "Luxus Beauty · APHORIA"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "<p><em>The Art of<br>Pure Beauty</em></p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Unterüberschrift",
+      "default": "Wissenschaft trifft Ritual — entwickelt für anspruchsvolle Haut."
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "Ausrichtung",
+      "options": [
+        { "value": "left", "label": "Links" },
+        { "value": "center", "label": "Mitte" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Textfarbe",
+      "default": "#F2D0C8"
+    },
+    {
+      "type": "header",
+      "content": "Buttons"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button 1 Text",
+      "default": "Kollektion entdecken"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button 1 Link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button 2 Text",
+      "default": "Bestseller"
+    },
+    {
+      "type": "url",
+      "id": "button_2_url",
+      "label": "Button 2 Link"
+    },
+    {
+      "type": "header",
+      "content": "Extras"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scroll_indicator",
+      "label": "Scroll-Indikator anzeigen",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Aphoria Hero",
+      "settings": {
+        "eyebrow": "Luxus Beauty · APHORIA",
+        "heading": "<p><em>The Art of<br>Pure Beauty</em></p>",
+        "subheading": "Wissenschaft trifft Ritual — entwickelt für anspruchsvolle Haut.",
+        "button_label": "Kollektion entdecken",
+        "button_2_label": "Bestseller",
+        "show_scroll_indicator": true
+      }
+    }
+  ]
+}
+{% endschema %}
