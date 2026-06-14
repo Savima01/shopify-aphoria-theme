@@ -74,10 +74,10 @@
       ],
       "settings": {
         "color_scheme": "scheme-5",
-        "padding_top": 60,
-        "padding_bottom": 60,
+        "padding_top": 30,
+        "padding_bottom": 20,
         "title": "Unsere Welten",
-        "heading_size": "h2",
+        "heading_size": "h0",
         "description": "Drei Rituale. Eine Philosophie. Pure Luxuspflege.",
         "button": "",
         "button_link": "",
