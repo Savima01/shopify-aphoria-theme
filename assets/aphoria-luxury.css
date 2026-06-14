@@ -623,3 +623,162 @@
     color: var(--aphoria-rose-copper) !important;
   }
 }
+
+/* ─── Mobile Drawer Navigation ─── */
+
+.menu-drawer {
+  background: var(--aphoria-noir) !important;
+  border-right: 1px solid rgba(201, 165, 126, 0.15) !important;
+}
+
+.menu-drawer__inner-submenu,
+.menu-drawer__navigation-item {
+  border-color: rgba(242, 208, 200, 0.08) !important;
+}
+
+.menu-drawer__menu-item {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+  color: var(--aphoria-rose-copper) !important;
+}
+
+.menu-drawer__menu-item:hover {
+  color: var(--aphoria-gold) !important;
+}
+
+.menu-drawer__close-button svg,
+.menu-drawer .icon {
+  color: var(--aphoria-rose-copper) !important;
+}
+
+/* ─── Font Overrides — globale Konsistenz ─── */
+
+/* Alle h1-h4 auf dem Store */
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-family: var(--aphoria-font-heading) !important;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+/* Body-Text global */
+body,
+p,
+li,
+input,
+textarea,
+select,
+button:not(.aphoria-btn):not(.aphoria-tm__dot) {
+  font-family: var(--aphoria-font-body);
+}
+
+/* Preise */
+.price,
+.price__regular,
+.price__sale,
+.price-item {
+  font-family: var(--aphoria-font-body) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Produkt-Titel auf Karten */
+.card__heading,
+.card__heading a {
+  font-family: var(--aphoria-font-heading) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Pagination, Labels, Tags */
+.badge,
+.product-label,
+.tag {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+}
+
+/* ─── Image-with-Text-Overlay Section ─── */
+
+/* Kategorie-Karten: Hover-Overlay Bordeaux-Tint */
+.image-item:hover .image-item__overlay,
+.main-image-with-text-overlay .image-item:hover::after {
+  background: rgba(124, 29, 60, 0.35) !important;
+}
+
+/* Kategorie-Titel in Montserrat-Uppercase */
+.main-image-with-text-overlay .image-item__title,
+.image-item__title {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase !important;
+}
+
+/* ─── Icon-With-Text Trust Badges ─── */
+
+/* Titel */
+.icon-with-text__title,
+.icon_with_text__title {
+  font-family: var(--aphoria-font-heading) !important;
+  font-style: italic !important;
+  font-size: clamp(15px, 1.5vw, 18px) !important;
+  color: var(--aphoria-rose-copper) !important;
+}
+
+/* Beschreibung */
+.icon-with-text__description,
+.icon_with_text__description {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  color: rgba(242, 208, 200, 0.65) !important;
+}
+
+/* ─── Product Tabs Section ─── */
+
+.tab-title,
+.tab__title,
+.product-tabs__tab {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.2em !important;
+  text-transform: uppercase !important;
+}
+
+.tab-title.active,
+.tab__title.active,
+.product-tabs__tab.is-active,
+.product-tabs__tab[aria-selected="true"] {
+  color: var(--aphoria-gold) !important;
+  border-bottom-color: var(--aphoria-gold) !important;
+}
+
+/* ─── Blog / Journal Section ─── */
+
+.article-card__title,
+.blog-card__title {
+  font-family: var(--aphoria-font-heading) !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+}
+
+.article-card__info,
+.blog-card__meta {
+  font-family: var(--aphoria-font-body) !important;
+  font-size: 10px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--aphoria-gold) !important;
+}
