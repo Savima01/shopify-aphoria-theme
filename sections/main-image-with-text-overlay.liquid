@@ -12,10 +12,22 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    #section-{{ section.id }} .image-with-text-overlay {
+      width: {{ 100.0 | divided_by: section.settings.columns_desktop }}%;
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 1024px) {
+    #section-{{ section.id }} .image-with-text-overlay {
+      width: {{ 100.0 | divided_by: section.settings.columns_tablet }}%;
+    }
+  }
 {%- endstyle -%}
 
 
-<div class="main-section color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" data-section-id="{{ section.id }}" data-section-type="image-with-text-overlay">
+<div id="section-{{ section.id }}" class="main-section color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding" data-section-id="{{ section.id }}" data-section-type="image-with-text-overlay">
     <div class="page-width">
         {% if section.settings.title != blank %}
             <div class="title text-center ">
@@ -104,6 +116,24 @@
           "id": "color_scheme",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
+        },
+        {
+          "type": "range",
+          "id": "columns_desktop",
+          "label": "Spalten (Desktop)",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 3
+        },
+        {
+          "type": "range",
+          "id": "columns_tablet",
+          "label": "Spalten (Tablet)",
+          "min": 1,
+          "max": 3,
+          "step": 1,
+          "default": 2
         },
         {
             "type": "range",
