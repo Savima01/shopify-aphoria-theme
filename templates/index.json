@@ -144,8 +144,8 @@
       "settings": {
         "color_scheme": "scheme-5",
         "section_layout": "layout_1",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "column": 4
       }
     },
