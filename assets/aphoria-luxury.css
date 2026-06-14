@@ -400,51 +400,58 @@
   box-shadow: 0 4px 40px rgba(10, 2, 5, 0.55) !important;
 }
 
-/* Logo-Bereich — zentriert (top-center Layout) */
-.header--top-center .header__heading,
-.header__heading {
+/* Header-Top — Logo absolut zentriert, Icons rechts, Search links */
+.header--top-center .header-top {
   display: flex !important;
-  justify-content: center !important;
   align-items: center !important;
-  width: 100% !important;
-  padding: 20px 0 10px !important;
+  justify-content: space-between !important;
+  position: relative !important;
+  padding-block: 16px !important;
 }
 
-/* Logo — Textversion (kein Bild hinterlegt) */
+/* Logo — absolut in der Mitte, unabhängig von anderen Flex-Items */
+.header--top-center .header__heading {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  padding: 0 !important;
+  display: block !important;
+  pointer-events: none;
+}
+
+.header--top-center .header__heading a {
+  pointer-events: auto;
+}
+
+/* Logo — Textversion */
 .header__heading-link .h2,
 .header__heading-link span.h2 {
   font-family: var(--font-heading-family) !important;
   font-style: italic !important;
-  font-size: clamp(24px, 3vw, 36px) !important;
+  font-size: clamp(18px, 2.2vw, 28px) !important;
   font-weight: 400 !important;
-  letter-spacing: 0.32em !important;
+  letter-spacing: 0.12em !important;
   color: var(--aphoria-rose-copper) !important;
   text-transform: uppercase !important;
-  transition: font-size 0.4s ease !important;
+  white-space: nowrap !important;
   display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  transition: font-size 0.4s ease !important;
 }
 
 /* Logo schrumpft beim Scrollen */
 .shopify-section-header-sticky .header__heading-link .h2 {
-  font-size: clamp(18px, 2vw, 24px) !important;
+  font-size: clamp(14px, 1.6vw, 20px) !important;
 }
 
 /* Logo Bild (falls hochgeladen) */
 .header__heading-logo {
-  max-width: 160px !important;
+  max-width: 140px !important;
   transition: max-width 0.4s ease !important;
 }
 
 .shopify-section-header-sticky .header__heading-logo {
-  max-width: 110px !important;
-}
-
-/* Icons-Zeile auf gleiche Höhe wie Logo */
-.header--top-center .header-top {
-  justify-content: flex-end !important;
-  padding-block: 12px !important;
+  max-width: 100px !important;
 }
 
 /* ─── Desktop Navigation ─── */
@@ -580,6 +587,32 @@
 .header__search .search__button {
   color: var(--aphoria-rose-copper) !important;
   background: transparent !important;
+}
+
+/* ─── Account Block — kompakt (nur "Konto" als Icon-Link) ─── */
+
+.header-middle__item--account {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* "Mein Konto" Titelzeile — nur Text, kompakt */
+.header-middle__item--account .customer_top .acc-title span,
+.header-middle__item--account .customer_top .acc-title {
+  font-family: var(--font-body-family) !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--aphoria-rose-copper) !important;
+  white-space: nowrap !important;
+}
+
+/* "Anmelden oder Registrieren" — versteckt auf Desktop */
+@media (min-width: 990px) {
+  .header-middle__item--account .customer_bottom {
+    display: none !important;
+  }
 }
 
 /* ─── Icons: Suche, Wishlist, Warenkorb ─── */
@@ -779,6 +812,3 @@ button:not(.aphoria-btn):not(.aphoria-tm__dot) {
   text-transform: uppercase !important;
   color: var(--aphoria-gold) !important;
 }
-h4 { font-size: 18px; }
-h5 { font-size: 15px; }
-h6 { font-size: 13px; }
