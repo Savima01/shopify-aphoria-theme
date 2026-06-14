@@ -779,3 +779,6 @@ button:not(.aphoria-btn):not(.aphoria-tm__dot) {
   text-transform: uppercase !important;
   color: var(--aphoria-gold) !important;
 }
+h4 { font-size: 18px; }
+h5 { font-size: 15px; }
+h6 { font-size: 13px; }
