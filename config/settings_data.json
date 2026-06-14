@@ -231,50 +231,50 @@
       },
       "scheme-2": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#FAF6F3",
           "background_gradient": "",
-          "heading": "#000000",
-          "text": "#000000",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "heading": "#0A0205",
+          "text": "#1a0a10",
+          "button": "#7C1D3C",
+          "button_label": "#F2D0C8",
+          "secondary_button_label": "#7C1D3C",
+          "shadow": "#0A0205"
         }
       },
       "scheme-3": {
         "settings": {
-          "background": "#ffffff",
+          "background": "#7C1D3C",
           "background_gradient": "",
-          "heading": "#ffffff",
-          "text": "#ffffff",
-          "button": "#121212",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#121212",
-          "shadow": "#121212"
+          "heading": "#F2D0C8",
+          "text": "#F2D0C8",
+          "button": "#0A0205",
+          "button_label": "#F2D0C8",
+          "secondary_button_label": "#F2D0C8",
+          "shadow": "#0A0205"
         }
       },
       "scheme-4": {
         "settings": {
-          "background": "#ea2176",
+          "background": "#1a0a10",
           "background_gradient": "",
-          "heading": "#ffffff",
-          "text": "#ffffff",
-          "button": "#ffffff",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#ffffff"
+          "heading": "#C9A57E",
+          "text": "#F2D0C8",
+          "button": "#7C1D3C",
+          "button_label": "#F2D0C8",
+          "secondary_button_label": "#C9A57E",
+          "shadow": "#0A0205"
         }
       },
       "scheme-5": {
         "settings": {
-          "background": "#eeeef1",
+          "background": "#F2D0C8",
           "background_gradient": "",
-          "heading": "#000000",
-          "text": "#000000",
-          "button": "#000000",
-          "button_label": "#ffffff",
-          "secondary_button_label": "#000000",
-          "shadow": "#121212"
+          "heading": "#0A0205",
+          "text": "#0A0205",
+          "button": "#0A0205",
+          "button_label": "#F2D0C8",
+          "secondary_button_label": "#0A0205",
+          "shadow": "#0A0205"
         }
       },
       "scheme-c552c7b8-e38f-4a1e-900f-b6c6dccd546c": {
