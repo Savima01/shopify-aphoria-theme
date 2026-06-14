@@ -43,8 +43,9 @@
     margin-bottom: {{ section.settings.margin_bottom | round: 0 }}px;
   }
 
-
- 
+  .site-nav > .menu-lv-1 > .nav-action {
+    font-size: {{ section.settings.nav_font_size }}px !important;
+  }
 {%- endstyle -%}
 <script src="{{ 'jquery.min.js' | asset_url }}"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -515,6 +516,20 @@
       ],
       "default": "center",
       "label": "t:sections.header.settings.mobile_logo_position.label"
+    },
+    {
+      "type": "header",
+      "content": "Navigation"
+    },
+    {
+      "type": "range",
+      "id": "nav_font_size",
+      "label": "Navigation Schriftgröße (px)",
+      "min": 9,
+      "max": 16,
+      "step": 1,
+      "default": 12,
+      "unit": "px"
     },
     {
       "type": "header",

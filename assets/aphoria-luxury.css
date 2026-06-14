@@ -400,28 +400,22 @@
   box-shadow: 0 4px 40px rgba(10, 2, 5, 0.55) !important;
 }
 
-/* Header-Top — Logo absolut zentriert, Icons rechts, Search links */
-.header--top-center .header-top {
+/* Header-Top — Logo links, Suche mittig, Icons rechts */
+.header-top {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  position: relative !important;
+  gap: 16px !important;
   padding-block: 16px !important;
 }
 
-/* Logo — absolut in der Mitte, unabhängig von anderen Flex-Items */
-.header--top-center .header__heading {
-  position: absolute !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  width: auto !important;
+/* Logo — linksbündig, normaler Flex-Item */
+.header__heading {
+  flex: 0 0 auto !important;
+  position: static !important;
+  transform: none !important;
   padding: 0 !important;
   display: block !important;
-  pointer-events: none;
-}
-
-.header--top-center .header__heading a {
-  pointer-events: auto;
 }
 
 /* Logo — Textversion */
@@ -429,7 +423,7 @@
 .header__heading-link span.h2 {
   font-family: var(--font-heading-family) !important;
   font-style: italic !important;
-  font-size: clamp(18px, 2.2vw, 28px) !important;
+  font-size: clamp(16px, 1.8vw, 24px) !important;
   font-weight: 400 !important;
   letter-spacing: 0.12em !important;
   color: var(--aphoria-rose-copper) !important;
@@ -441,7 +435,7 @@
 
 /* Logo schrumpft beim Scrollen */
 .shopify-section-header-sticky .header__heading-link .h2 {
-  font-size: clamp(14px, 1.6vw, 20px) !important;
+  font-size: clamp(13px, 1.4vw, 18px) !important;
 }
 
 /* Logo Bild (falls hochgeladen) */
@@ -496,7 +490,6 @@
 
   /* Nav-Link Wrapper */
   .site-nav > .menu-lv-1 > .nav-action {
-    font-size: 12px !important;
     font-weight: 600 !important;
     letter-spacing: 0.18em !important;
     text-transform: uppercase !important;
@@ -557,12 +550,12 @@
 
 }
 
-/* ─── Suchleiste — auf Desktop ausgeblendet (Luxury-Pattern) ─── */
+/* ─── Suchleiste ─── */
 
-@media (min-width: 990px) {
-  .header__search {
-    display: none !important;
-  }
+.header__search {
+  flex: 0 1 220px !important;
+  max-width: 220px !important;
+  min-width: 0 !important;
 }
 
 /* Mobile Suche */
