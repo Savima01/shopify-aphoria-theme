@@ -338,9 +338,12 @@
         "review_2",
         "review_3"
       ],
+      "custom_css": [
+        "h2 {font-size: 35px;}"
+      ],
       "settings": {
         "eyebrow": "Kundenstimmen",
-        "heading": "<p><em>Was unsere<br>Kunden sagen</em></p>"
+        "heading": "<h2><em>Was unsere Kunden sagen</em></h2>"
       }
     },
     "featured_blog_f4WB6C": {
