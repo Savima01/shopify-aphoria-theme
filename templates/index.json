@@ -188,97 +188,47 @@
         "image_item_8Kq4yw": {
           "type": "image_item",
           "settings": {
-            "title": "Face",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": "/"
-          }
-        },
-        "image_item_ijLazJ": {
-          "type": "image_item",
-          "settings": {
-            "title": "Líps",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": "/"
-          }
-        },
-        "image_item_6RTt7N": {
-          "type": "image_item",
-          "settings": {
-            "title": "Eyes",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": ""
+            "title": "Hautpflege",
+            "des_bottom": "Seren, Feuchtigkeitspflege, Masken — modernste Formel für strahlende Haut.",
+            "link": "Entdecken",
+            "link_url": "shopify://collections/aphoria-collection"
           }
         },
         "image_item_HNzABm": {
           "type": "image_item",
           "settings": {
-            "title": "Body",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": ""
+            "title": "Körperpflege",
+            "des_bottom": "Luxuriöse Körperpflegeprodukte für samtweiches, verwöhntes Hautgefühl.",
+            "link": "Entdecken",
+            "link_url": "shopify://collections/aphoria-collection"
           }
         },
-        "image_item_hVFXXc": {
+        "image_item_6RTt7N": {
           "type": "image_item",
           "settings": {
-            "title": "Nullam aliquet",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": ""
-          }
-        },
-        "image_item_PnzDP9": {
-          "type": "image_item",
-          "settings": {
-            "title": "Makeup Tools",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": ""
-          }
-        },
-        "image_item_ArFyeH": {
-          "type": "image_item",
-          "settings": {
-            "title": "Makeup Sets and Gifts",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": ""
-          }
-        },
-        "image_item_8TTeUB": {
-          "type": "image_item",
-          "settings": {
-            "title": "Hair care",
-            "des_bottom": "Nullam aliquet vestibulum augue non varius. Cras cosmo congue delos melitos. Duis tristique del ante le maliquam praesento",
-            "link": "shop now",
-            "link_url": "shopify://products/cream-sofa"
+            "title": "Düfte",
+            "des_bottom": "Komplexe Düfte, handgefertigt — ein Kunstwerk für die Sinne.",
+            "link": "Entdecken",
+            "link_url": "shopify://collections/aphoria-collection"
           }
         }
       },
       "block_order": [
         "image_item_8Kq4yw",
-        "image_item_ijLazJ",
-        "image_item_6RTt7N",
         "image_item_HNzABm",
-        "image_item_hVFXXc",
-        "image_item_PnzDP9",
-        "image_item_ArFyeH",
-        "image_item_8TTeUB"
+        "image_item_6RTt7N"
       ],
       "settings": {
         "color_scheme": "scheme-5",
-        "padding_top": 10,
-        "padding_bottom": 40,
-        "title": "Shop categories",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "title": "Unsere Welten",
         "heading_size": "h2",
-        "description": "Nullam aliquet vestibulum augue non varius.",
+        "description": "Drei Rituale. Eine Philosophie. Pure Luxuspflege.",
         "button": "",
         "button_link": "",
-        "button2": "view all",
-        "button_link2": "shopify://collections/all",
+        "button2": "Alle Produkte",
+        "button_link2": "shopify://collections/aphoria-collection",
         "color_scheme_item": "scheme-3"
       }
     },
