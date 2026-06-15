@@ -116,7 +116,7 @@
         "color_scheme_1": "scheme-1",
         "logo_position": "top-center",
         "enable-header-wishlist": true,
-        "menu": "aphoria-men",
+        "menu": "mega-menue_aphoria",
         "menu_type_desktop": "mega",
         "sticky_header_type": "reduce-logo-size",
         "show_line_separator": false,
