@@ -24,6 +24,24 @@
       width: {{ 100.0 | divided_by: section.settings.columns_tablet }}%;
     }
   }
+
+  {%- if section.settings.overlay_text_color != blank -%}
+    #section-{{ section.id }} .image-with-text-overlay__content .title,
+    #section-{{ section.id }} .image-with-text-overlay__content h3,
+    #section-{{ section.id }} .image-with-text-overlay__content h3 span {
+      color: {{ section.settings.overlay_text_color }} !important;
+    }
+    #section-{{ section.id }} .image-with-text-overlay__content .des {
+      color: {{ section.settings.overlay_text_color }} !important;
+    }
+  {%- endif -%}
+
+  {%- if section.settings.overlay_button_color != blank -%}
+    #section-{{ section.id }} .image-with-text-overlay__content .button {
+      color: {{ section.settings.overlay_button_color }} !important;
+      border-color: {{ section.settings.overlay_button_color }} !important;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 
@@ -223,6 +241,22 @@
           "id": "color_scheme_item",
           "label": "t:sections.all.colors.label",
           "default": "scheme-1"
+        },
+        {
+          "type": "header",
+          "content": "Text-Overlay Farben"
+        },
+        {
+          "type": "color",
+          "id": "overlay_text_color",
+          "label": "Überschrift & Text",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_button_color",
+          "label": "Button-Text & Rahmen",
+          "default": "#ffffff"
         }
     ],
     "blocks": [
