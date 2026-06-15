@@ -11,6 +11,9 @@
   "sections": {
     "aphoria_hero_main": {
       "type": "aphoria-hero",
+      "custom_css": [
+        "h2 {font-size: 76px}"
+      ],
       "settings": {
         "video": "",
         "height_mobile": 700,
@@ -19,12 +22,11 @@
         "overlay_tint": "#7c1d3c",
         "overlay_tint_opacity": 20,
         "eyebrow": "Luxus Beauty · APHORIA",
-        "heading": "<p><em>The Art of<br>Pure Beauty</em></p>",
+        "heading": "<h2><em>The Art of<br/>Pure Beauty</em></h2>",
         "subheading": "Wissenschaft trifft Ritual — entwickelt für anspruchsvolle Haut.",
         "content_alignment": "left",
         "content_position": "flex-start",
         "content_offset": 140,
-        "heading_size": 72,
         "text_color": "#f2d0c8",
         "button_label": "Kollektion entdecken",
         "button_url": "shopify://collections/all",
