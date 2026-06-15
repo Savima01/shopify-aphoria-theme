@@ -54,6 +54,63 @@
     },
     "header": {
       "type": "header",
+      "blocks": {
+        "style_1_4nVngh": {
+          "type": "style_1",
+          "settings": {
+            "megamenu_items_1": "Catalog",
+            "title_menu_1": "Shop by",
+            "url_shop_1": "",
+            "link_menu_1": "",
+            "title_featured_product_1": "Featured Products",
+            "collection_1": "aphoria-collection",
+            "banner_image_1_1": "shopify://shop_images/a-create-photorealistic.webp",
+            "link_banner_image_1_1": ""
+          }
+        },
+        "style_4_P8rWQi": {
+          "type": "style_4",
+          "settings": {
+            "megamenu_items_4": "Catalog",
+            "link_banner_image_4_1": "",
+            "title_featured_product_4": "Top Rated",
+            "collection_4": "",
+            "link_banner_image_4_2": "",
+            "link_banner_image_4_3": ""
+          }
+        },
+        "style_2_THemUL": {
+          "type": "style_2",
+          "settings": {
+            "megamenu_items_2": "Catalog",
+            "title_menu_2": "Shop by",
+            "url_shop_2": "",
+            "link_menu_2": "",
+            "title_featured_product_2": "Top Brands",
+            "brands_link_2_1": "",
+            "brands_link_2_2": "",
+            "brands_link_2_3": "",
+            "brands_link_2_4": "",
+            "link_banner_image_2_1": "",
+            "link_banner_image_2_2": ""
+          }
+        },
+        "style_3_wf9WUK": {
+          "type": "style_3",
+          "settings": {
+            "megamenu_items_3": "Catalog",
+            "countdown_text": "Special offer: Sale upto 40% off on selected items. End ins:",
+            "countdown_text_end": "End ins:",
+            "countdown_timer": "2020/12/25 22:11:00"
+          }
+        }
+      },
+      "block_order": [
+        "style_1_4nVngh",
+        "style_4_P8rWQi",
+        "style_2_THemUL",
+        "style_3_wf9WUK"
+      ],
       "settings": {
         "color_scheme": "scheme-1",
         "color_scheme_1": "scheme-1",
