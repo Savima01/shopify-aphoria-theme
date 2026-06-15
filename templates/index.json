@@ -15,6 +15,7 @@
         "h2 {font-size: 76px}"
       ],
       "settings": {
+        "image": "shopify://shop_images/b_use_a_16_9_aspect_ra.jpg",
         "video": "",
         "height_mobile": 700,
         "height_desktop": 900,
