@@ -1,0 +1,228 @@
+{%- style -%}
+  .aphoria-lbhero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: {{ section.settings.height_mobile }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .aphoria-lbhero {
+      height: {{ section.settings.height_desktop }}px;
+    }
+  }
+
+  .aphoria-lbhero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .aphoria-lbhero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, {{ section.settings.overlay_opacity | divided_by: 100.0 }});
+  }
+
+  .aphoria-lbhero__content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    gap: 1.6rem;
+  }
+
+  .aphoria-lbhero__eyebrow {
+    font-family: var(--font-body-family);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: {{ section.settings.text_color }};
+    opacity: 0.8;
+  }
+
+  .aphoria-lbhero__heading {
+    font-family: var(--font-heading-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: {{ section.settings.heading_size }}px;
+    line-height: 1.1;
+    color: {{ section.settings.text_color }};
+    margin: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .aphoria-lbhero__heading {
+      font-size: {{ section.settings.heading_size | times: 1.3 | round: 0 }}px;
+    }
+  }
+
+  .aphoria-lbhero__cta {
+    display: inline-block;
+    margin-top: 0.8rem;
+    padding: 1.4rem 3.2rem;
+    font-family: var(--font-body-family);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    background: {{ section.settings.button_bg }};
+    color: {{ section.settings.button_text }};
+    border: 1.5px solid {{ section.settings.button_bg }};
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .aphoria-lbhero__cta:hover {
+    background: transparent;
+    color: {{ section.settings.button_bg }};
+    border-color: {{ section.settings.button_bg }};
+  }
+{%- endstyle -%}
+
+<div class="aphoria-lbhero">
+  {%- if section.settings.image != blank -%}
+    <img
+      class="aphoria-lbhero__image"
+      src="{{ section.settings.image | image_url: width: 2000 }}"
+      alt="{{ section.settings.image.alt | escape }}"
+      loading="eager"
+      width="{{ section.settings.image.width }}"
+      height="{{ section.settings.image.height }}"
+    >
+  {%- else -%}
+    <div class="aphoria-lbhero__image" style="background: #1a1a1a;"></div>
+  {%- endif -%}
+
+  <div class="aphoria-lbhero__overlay"></div>
+
+  <div class="aphoria-lbhero__content">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="aphoria-lbhero__eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.heading != blank -%}
+      <h1 class="aphoria-lbhero__heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+
+    {%- if section.settings.button_label != blank and section.settings.button_url != blank -%}
+      <a class="aphoria-lbhero__cta" href="{{ section.settings.button_url }}">
+        {{ section.settings.button_label }}
+      </a>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Lookbook Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hintergrundbild"
+    },
+    {
+      "type": "range",
+      "id": "height_desktop",
+      "label": "Höhe Desktop (px)",
+      "min": 400,
+      "max": 900,
+      "step": 50,
+      "default": 650
+    },
+    {
+      "type": "range",
+      "id": "height_mobile",
+      "label": "Höhe Mobile (px)",
+      "min": 300,
+      "max": 700,
+      "step": 50,
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay-Dunkelheit (%)",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Inhalt"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow-Text",
+      "default": "Das APHORIA Lookbook"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Überschrift",
+      "default": "Beauty als Ritual"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Schriftgröße Überschrift (px)",
+      "min": 28,
+      "max": 80,
+      "step": 2,
+      "default": 52
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Text",
+      "default": "Kollektion entdecken"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button Link"
+    },
+    {
+      "type": "header",
+      "content": "Farben"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Textfarbe",
+      "default": "#FAF6F3"
+    },
+    {
+      "type": "color",
+      "id": "button_bg",
+      "label": "Button Hintergrund",
+      "default": "#FAF6F3"
+    },
+    {
+      "type": "color",
+      "id": "button_text",
+      "label": "Button Textfarbe",
+      "default": "#0A0205"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Lookbook Hero"
+    }
+  ]
+}
+{% endschema %}

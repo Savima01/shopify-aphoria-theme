@@ -1,0 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "aphoria_lookbook_hero": {
+      "type": "aphoria-lookbook-hero",
+      "settings": {
+        "eyebrow": "Das APHORIA Lookbook",
+        "heading": "Beauty als Ritual",
+        "heading_size": 52,
+        "height_desktop": 650,
+        "height_mobile": 500,
+        "overlay_opacity": 30,
+        "button_label": "Kollektion entdecken",
+        "button_url": "shopify://collections/aphoria-collection",
+        "text_color": "#FAF6F3",
+        "button_bg": "#FAF6F3",
+        "button_text": "#0A0205"
+      }
+    }
+  },
+  "order": [
+    "aphoria_lookbook_hero"
+  ]
+}
