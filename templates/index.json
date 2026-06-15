@@ -292,7 +292,7 @@
         "show_secondary_image": false,
         "show_vendor": false,
         "show_rating": true,
-        "enable_quick_add": true
+        "enable_quick_add": false
       }
     },
     "featured_blog_f4WB6C": {
