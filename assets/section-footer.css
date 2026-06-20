@@ -518,3 +518,6 @@
 footer .newsletter-form__button {
   color: rgb(var(--color-button-text));
 }
+.footer-block__brand-info > p {
+  margin-top: 1.5rem;
+}
