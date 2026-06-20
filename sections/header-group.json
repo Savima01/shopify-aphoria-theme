@@ -82,22 +82,6 @@
             "link_banner_image_4_3": ""
           }
         },
-        "style_2_THemUL": {
-          "type": "style_2",
-          "settings": {
-            "megamenu_items_2": "Catalog",
-            "title_menu_2": "Shop by",
-            "url_shop_2": "",
-            "link_menu_2": "",
-            "title_featured_product_2": "Top Brands",
-            "brands_link_2_1": "",
-            "brands_link_2_2": "",
-            "brands_link_2_3": "",
-            "brands_link_2_4": "",
-            "link_banner_image_2_1": "",
-            "link_banner_image_2_2": ""
-          }
-        },
         "style_3_wf9WUK": {
           "type": "style_3",
           "settings": {
@@ -111,7 +95,6 @@
       "block_order": [
         "style_1_4nVngh",
         "style_4_P8rWQi",
-        "style_2_THemUL",
         "style_3_wf9WUK"
       ],
       "settings": {
@@ -132,10 +115,26 @@
         "padding_bottom": 0,
         "enable_megamenu": true
       }
+    },
+    "17819447163954d996": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_verified_badge_qC9UDU": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_verified_badge_qC9UDU"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "17819447163954d996"
   ]
 }
