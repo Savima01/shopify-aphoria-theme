@@ -23,6 +23,10 @@
           "type": "title",
           "settings": {}
         },
+        "judge_me_reviews_preview_badge_bKdxfc": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "sku_6yBU8H": {
           "type": "sku",
           "settings": {
@@ -75,15 +79,12 @@
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
           }
-        },
-        "judge_me_reviews_preview_badge_bKdxfc": {
-          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "judge_me_reviews_preview_badge_bKdxfc",
         "sku_6yBU8H",
         "inventory_r7CAki",
         "count_down_HLHEWf",
@@ -92,8 +93,7 @@
         "delivery_BtynG6",
         "share",
         "variant_picker",
-        "buy_buttons",
-        "judge_me_reviews_preview_badge_bKdxfc"
+        "buy_buttons"
       ],
       "settings": {
         "id_section": "product-description",
